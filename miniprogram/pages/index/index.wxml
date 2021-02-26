@@ -1,0 +1,25 @@
+<view class="container">
+  <view wx:if="{{login}}">
+    <!-- 搜索 -->
+    <view class='search-wrapper'>
+       <input class='search-input' placeholder='搜索' value='{{searchContent}}' bindinput='searchChange'>
+       </input>
+       <i class="iconfont icondacha search-delete-icon" bindtap="clearSearch"></i>
+    </view>
+    <!-- heading -->
+    <view class='heading-wrapper'>
+      <view class='heading-classes'>品名</view>
+      <view class='heading-remain'>余量</view>
+    </view>
+    <view wx:for="{{displayClasses}}" wx:key="{{item}}" class='heading-wrapper'>
+      <view class='heading-classes'>{{item.classes}}</view>
+      <view class='heading-remain'>{{item.remain}}</view>
+      <i class="iconfont iconjia icon-add" bindtap="editRemain" id="{{index}}"></i>
+    </view>
+    <button class='add-classes-btn' bindtap='addClasses'>添加品名</button>
+    <button class='open-history-btn' bindtap='openHistory'>历史记录</button>
+    <text class='logout' bindtap='confirmLogout'>我想要注销</text>
+    <text class='open-permission' bindtap='changePermission' wx:if="{{userType=='admin'}}">权限管理</text>
+  </view>
+  <button open-type='getUserInfo' bindgetuserinfo="onGotUserInfo" class="login-btn" wx:if="{{!login}}" loading="{{loading}}">微信登录</button>
+</view>

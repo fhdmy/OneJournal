@@ -1,0 +1,43 @@
+<view class="container">
+  <modal hidden="{{hiddenmodalput}}" title="时间" confirm-text="确定" cancel-text="关闭" bindcancel="cancel" bindconfirm="confirm">  
+  <picker range='{{dateSortAllRange}}' class='picker-wrapper' bindchange='changeSortAll' value='{{tempDateSortAll}}'>
+      <text class='picker-name'>全部:</text>
+      <text class='picker-val'>{{tempDateSortAll}}</text>
+    </picker>
+    <picker range='{{sortRange}}' class='picker-wrapper' bindchange='changeSort' value='{{tempSort}}'>
+      <text class='picker-name'>排序:</text>
+      <text class='picker-val'>{{tempSort}}</text>
+    </picker>
+    <picker mode="date" class='picker-wrapper' bindchange='changeStart' value='{{tempDateStart}}' start="2018-01-01" end="2100-01-01" wx:if="{{tempDateSortAll=='否'}}">
+      <text class='picker-name'>起始时间:</text>
+      <text class='picker-val'>{{tempDateStart}}</text>
+    </picker>
+    <picker mode="date" class='picker-wrapper' bindchange='changeEnd' value='{{tempDateEnd}}' start="2018-01-01" end="2100-01-01" wx:if="{{tempDateSortAll=='否'}}">
+      <text class='picker-name'>结束时间:</text>
+      <text class='picker-val'>{{tempDateEnd}}</text>
+    </picker>
+  </modal> 
+  <view class="table">
+    <view class="tr">
+      <view class="th {{index==0?'t-date':''}}" wx:for="{{historyTitle}}" wx:key="{{item}}" bindtap='chooseShow' id="{{index}}"><text wx-if="{{index!=1 && index!=5}}">{{item}}</text>
+      <i class="iconfont iconxiangxia title-icon" wx-if="{{index==0}}"></i>
+      <picker range='{{classRange}}' value='{{classChosen}}' wx:if="{{index==1}}" bindchange='changeClass'>
+        <text>{{item}}</text>
+        <i class="iconfont iconxiangxia title-icon"></i>
+      </picker>
+      <picker range='{{belongRange}}' value='{{belongChosen}}' wx:if="{{index==5}}" bindchange='changeBelong'>
+        <text>{{item}}</text>
+        <i class="iconfont iconxiangxia title-icon"></i>
+      </picker>
+      </view>
+    </view>
+    <view class="tr" wx:for="{{showHistoryData}}" wx:key="{{item}}" id="{{index}}" bindtap='openDetail'>
+      <view class="td t-date">{{item.date}}</view>
+      <view class="td">{{item.classes}}</view>
+      <view class="td">{{item.sum}}</view>
+      <view class="td">{{item.remain}}</view>
+      <view class="td">{{item.use}}</view>
+      <view class="td">{{item.belong}}</view>
+    </view>
+  </view>
+</view>

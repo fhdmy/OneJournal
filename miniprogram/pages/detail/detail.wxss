@@ -1,0 +1,77 @@
+@import"/iconfont.wxss";
+.submit-btn{
+  background:#626B4C;
+  width: 670rpx;
+  margin: 60rpx 40rpx 0;
+  color: white;
+}
+.delete-btn{
+  background: #4B221E;
+  width: 670rpx;
+  margin: 40rpx 40rpx;
+  color: white;
+}
+.item-wrapper{
+  width: 670rpx;
+  height: 120rpx;
+  padding: 0 40rpx;
+  border-bottom: 1px solid #cccccc;
+}
+.item-name{
+  font-size: 32rpx;
+  color: #484848;
+  float: left;
+  margin-top: 37rpx; 
+}
+.item-val{
+  color: #999999;
+  font-size: 32rpx;
+  float: right;
+  margin-right: 30rpx;
+  margin-top: 37rpx;
+  max-width: 515rpx;
+  text-align: right;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  display: block;
+  overflow: hidden;
+}
+.item-icon{
+  margin-top: 40rpx;
+  color: #999999;
+  float: right;
+}
+.picker-wrapper{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  border-bottom: 1px solid #cccccc;
+  align-items: center;
+}
+.picker-name{
+  font-size: 32rpx;
+  color: #484848;
+  float: left;
+  padding: 39rpx 0 37rpx 40rpx;
+}
+.picker-val{
+  font-size: 32rpx;
+  float: right;
+  padding: 39rpx 30rpx;
+  text-align: right;
+  width: 515rpx;
+  color: #999999;
+}
+.picker-icon{
+  color: #999999;
+  float: right;
+  padding: 42rpx 40rpx 40rpx 0;
+}
+.model-input{
+  border-bottom: 1px solid;
+  padding: 10rpx 0;
+  color:#484848;
+}
+.item-disedit{
+  margin-right: 10rpx;
+}

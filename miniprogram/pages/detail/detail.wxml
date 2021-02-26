@@ -1,0 +1,37 @@
+<view class="container">
+  <modal hidden="{{hiddenmodalput}}" title="备注" confirm-text="保存" cancel-text="关闭" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='text'placeholder="请输入内容" auto-focus class='model-input' value='{{tempRemark}}' bindinput='changeRemark' style='border-bottom-color:{{borderColor}}' cursor-spacing="50"/>  
+  </modal>  
+  <modal hidden="{{hiddenMP}}" title="品名" confirm-text="保存" cancel-text="关闭" bindcancel="cancelMP" bindconfirm="confirmMP">  
+    <input type='text'placeholder="请输入内容" auto-focus class='model-input' value='{{tempClasses}}' bindinput='changeMP' style='border-bottom-color:{{borderColor}}' cursor-spacing="50"/>  
+  </modal>
+  <view>
+    <view class='item-wrapper' bindtap='openModelMP'>
+      <text class='item-name'>品名</text>
+      <i class="iconfont iconyoujiantou item-icon" wx:if="{{(pageType!='editRemain' || userType=='admin'||((db=='cladding'||db=='claddingHistory')&&userType=='claddingAdmin')||((db=='compt'||db=='comptHistory')&&userType=='comptAdmin'))&&(db !='claddingHistory' && db != 'comptHistory')}}"></i>
+      <text class="item-val {{!((pageType!='editRemain' || userType=='admin'||((db=='cladding'||db=='claddingHistory')&&userType=='claddingAdmin')||((db=='compt'||db=='comptHistory')&&userType=='comptAdmin'))&&(db !='claddingHistory' && db != 'comptHistory'))?'item-disedit':''}}">{{classes}}</text>
+    </view>
+    <view class='item-wrapper'>
+      <text class='item-name'>总量</text>
+      <!-- <i class="iconfont iconyoujiantou item-icon"></i> -->
+      <text class='item-val item-disedit'>{{sum}}</text>
+    </view>
+    <picker range='{{useRange}}' class='picker-wrapper' mode = 'multiSelector' bindchange='changeUse' value='{{use}}'>
+      <text class='picker-name'>增量</text>
+      <i class="iconfont iconyoujiantou picker-icon"></i>
+      <text class='picker-val'>{{use}}</text>
+    </picker>
+    <picker mode="date" start="2018-01-01" end="2100-01-01" class='picker-wrapper' value='{{date}}' bindchange='changeDate'>
+      <text class='picker-name'>日期</text>
+      <i class="iconfont iconyoujiantou picker-icon"></i>
+      <text class='picker-val'>{{date}}</text>
+    </picker>
+    <view class='item-wrapper' bindtap='openModel'>
+      <text class='item-name'>备注</text>
+      <i class="iconfont iconyoujiantou item-icon"></i>
+      <text class='item-val'>{{remark}}</text>
+    </view>
+  </view>
+  <button class='submit-btn' bindtap='submitInform' loading='{{loading}}'>提交</button>
+  <button class='delete-btn' bindtap='deleteInform' loading='{{deleteLoading}}' wx:if="{{(userType=='admin' || ((db=='cladding' || db=='claddingHistory') && userType=='claddingAdmin') || ((db=='compt' || db=='comptHistory') && userType=='comptAdmin')) && pageType!='addClasses'}}">删除</button>
+</view>

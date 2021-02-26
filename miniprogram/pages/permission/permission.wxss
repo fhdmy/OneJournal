@@ -1,0 +1,46 @@
+@import"/iconfont.wxss";
+.item-wrapper{
+  width: 670rpx;
+  height: 120rpx;
+  padding: 0 40rpx;
+  border-bottom: 1px solid #cccccc;
+}
+.item-name{
+  font-size: 38rpx;
+  color: #484848;
+  margin-top: 10rpx;
+  margin-left: 30rpx; 
+}
+.item-type{
+  color: #888888;
+  font-size: 32rpx;
+  margin-left: 30rpx; 
+}
+.item-inner{
+  float: left;
+}
+.item-image{
+  height: 90rpx;
+  width: 90rpx;
+  max-height: 100%;
+  max-width:100%;
+  float: left;
+  margin-top: 15rpx;
+}
+.item-change-type{
+  float: right;
+  background: #24b9ff;
+  font-size: 32rpx;
+  padding: 10rpx 25rpx;
+  color: white;
+  margin-top: 30rpx;
+}
+.item-delete-user{
+  float: right;
+  background: #ff0000;
+  font-size: 32rpx;
+  padding: 10rpx 25rpx;
+  color: white;
+  margin-top: 30rpx;
+  margin-left: 25rpx;
+}

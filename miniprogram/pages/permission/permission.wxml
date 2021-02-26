@@ -1,0 +1,13 @@
+<view class="container">
+  <view>
+    <view class='item-wrapper' wx:for="{{userData}}" wx:key="{{item}}">
+      <image src='{{item.avatar}}' class='item-image'></image>
+      <view class='item-inner'>
+        <view class='item-name'>{{item.userName}}</view>
+        <view class='item-type'>{{item.userType}}</view>
+      </view>
+      <text class='item-delete-user' id="{{index}}" bindtap='deleteUser'>删除</text>
+      <text class='item-change-type' id="{{index}}" bindtap='changeType'>更改</text>
+    </view>
+  </view>
+</view>

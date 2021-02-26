@@ -1,0 +1,99 @@
+@import"/iconfont.wxss";
+.container{
+  margin-top: 20rpx;
+}
+.heading-wrapper{
+  width: 100%;
+  height: 96rpx;
+  border-bottom: 1px solid #cccccc;
+  display: table;
+  position: relative;
+}
+
+.heading-classes{
+  width: 50%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  height: 96rpx;
+  color: #484848;
+}
+
+.heading-remain{
+  display: table-cell;
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  height: 96rpx;
+  color: #484848;
+}
+.icon-add{
+  color: #484848;
+  position: absolute;
+  right: 0px;
+  padding-right: 40rpx;
+  padding-top: 32rpx;
+  padding-bottom: 30rpx;
+  padding: 30rpx 40rpx;
+  top: 0rpx;
+}
+.add-classes-btn{
+  background: #626B4C;
+  color: white;
+  border-radius: 0%!important;
+}
+.open-history-btn{
+  background: #4B221E;
+  color: white;
+  border-radius: 0%!important;
+}
+.open-permission-btn{
+  background: #6A492A;
+  color: white;
+  border-radius: 0%!important;
+}
+.login-btn{
+  background: #4B221E;
+  color: white;
+  width: 670rpx;
+  margin: 80rpx 40rpx;
+}
+.logout{
+  color:#FE9246;
+  float: right;
+  margin-right: 40rpx;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+  margin-bottom: 200rpx;
+}
+.open-permission{
+  color:#6A492A;
+  float: right;
+  margin-right: 40rpx;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+  margin-bottom: 200rpx;
+}
+
+.search-wrapper{
+  display: flex;
+}
+
+.search-input{
+  display: flex;
+  align-items:center;
+  border-radius: 100rpx;
+  background: #eeeeee;
+  color: #666666;
+  padding: 5rpx 80rpx 5rpx 40rpx;
+  width: 590rpx;
+  height: 70rpx;
+  margin:0 40rpx;
+}
+
+.search-delete-icon{
+  padding:15rpx 20rpx;
+  position: absolute;
+  top: 25rpx;
+  right: 60rpx;
+}
